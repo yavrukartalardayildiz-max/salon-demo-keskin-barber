@@ -1,0 +1,1313 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#14110F" media="(prefers-color-scheme: dark)" />
+<meta name="theme-color" content="#1C1815" media="(prefers-color-scheme: light)" />
+<title>KESKİN Barbershop — Moda, Kadıköy | Premium Erkek Bakımı</title>
+<meta name="description" content="KESKİN Barbershop — Moda, Kadıköy'de premium erkek kuaförü. Saç kesim, sakal şekillendirme, sıcak havlu ustura tıraşı. WhatsApp'tan randevu al." />
+
+<!-- Open Graph -->
+<meta property="og:type" content="business.business" />
+<meta property="og:title" content="KESKİN Barbershop — Premium Erkek Bakımı, Moda/Kadıköy" />
+<meta property="og:description" content="Saç kesim, sakal şekillendirme, sıcak havlu ustura tıraşı. Keskin çizgiler, net iş. Randevu için WhatsApp." />
+<meta property="og:locale" content="tr_TR" />
+<meta property="og:site_name" content="KESKİN Barbershop" />
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="KESKİN Barbershop — Premium Erkek Bakımı, Moda/Kadıköy" />
+<meta name="twitter:description" content="Saç kesim, sakal şekillendirme, sıcak havlu ustura tıraşı. Randevu için WhatsApp." />
+
+<!-- Emoji favicon (data-uri) -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💈</text></svg>" />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<style>
+  /* ============================================================
+     KESKİN BARBERSHOP — hand-written, self-contained CSS
+     Palette DNA preserved: coal / brass / oxblood / cream
+     Auto light+dark (prefers-color-scheme). No Tailwind, no FOUC.
+     ============================================================ */
+
+  :root {
+    color-scheme: light dark;
+
+    /* Brand constants */
+    --brass:   #C8A24A;
+    --brass2:  #E0BE68;
+    --oxblood: #6E2B2B;
+
+    /* DARK is the brand's primary identity (default) */
+    --bg:        #14110F;
+    --bg2:       #1C1815;
+    --surface:   #1C1815;
+    --surface2:  #14110F;
+    --ink:       #F2EDE4;          /* cream */
+    --ink-soft:  rgba(242,237,228,0.75);
+    --ink-faint: rgba(242,237,228,0.55);
+    --line:      rgba(200,162,74,0.16);
+    --line-strong: rgba(200,162,74,0.45);
+    --shadow:    0 18px 50px rgba(0,0,0,0.55);
+    --hero-glow1: rgba(200,162,74,0.18);
+    --hero-glow2: rgba(110,43,43,0.30);
+    --nav-bg:    rgba(20,17,15,0.92);
+    --texture-light: rgba(255,255,255,0.025);
+    --texture-dark:  rgba(0,0,0,0.25);
+  }
+
+  /* ---- LIGHT VARIANT: elegant warm parchment + espresso ink ---- */
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg:        #F2EDE4;        /* cream base */
+      --bg2:       #EAE2D4;
+      --surface:   #FBF8F2;
+      --surface2:  #F4EFE6;
+      --ink:       #1C1815;        /* coal ink */
+      --ink-soft:  rgba(28,24,21,0.78);
+      --ink-faint: rgba(28,24,21,0.55);
+      --line:      rgba(110,43,43,0.16);
+      --line-strong: rgba(200,162,74,0.55);
+      --shadow:    0 18px 44px rgba(28,24,21,0.14);
+      --hero-glow1: rgba(200,162,74,0.28);
+      --hero-glow2: rgba(110,43,43,0.14);
+      --nav-bg:    rgba(251,248,242,0.88);
+      --texture-light: rgba(255,255,255,0.5);
+      --texture-dark:  rgba(110,43,43,0.05);
+      --brass:   #A67E2E;          /* darker brass for 4.5:1 on light */
+    }
+  }
+
+  *,*::before,*::after { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+  /* fixed-nav offset so anchor jumps (mobile / no-Lenis) never hide headings under the bar */
+  :where(section[id], main[id]) { scroll-margin-top: 84px; }
+  body {
+    margin: 0;
+    font-family: 'Inter', system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+    line-height: 1.5;
+  }
+  ::selection { background: var(--brass); color: #14110F; }
+
+  img, iframe { max-width: 100%; display: block; }
+  a { color: inherit; text-decoration: none; }
+  h1,h2,h3,p { margin: 0; }
+  ul { margin: 0; padding: 0; list-style: none; }
+
+  /* ---------- type scale ---------- */
+  .font-display { font-family: 'Bebas Neue', sans-serif; font-weight: 400; letter-spacing: 0.03em; }
+  .font-head    { font-family: 'Oswald', sans-serif; }
+  .eyebrow {
+    font-family: 'Oswald', sans-serif; text-transform: uppercase;
+    letter-spacing: 0.3em; color: var(--brass); font-size: 0.72rem; font-weight: 600;
+  }
+  .h-sec {
+    font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.8rem, 9vw, 5rem);
+    line-height: 0.95; letter-spacing: 0.02em;
+    position: relative; display: inline-block; padding-bottom: 0.32em;
+  }
+  /* premium kinetic brass underline — draws in when the heading reveals */
+  .h-sec::after {
+    content: ''; position: absolute; left: 0; bottom: 0.06em;
+    height: 3px; width: clamp(48px, 18%, 96px);
+    background: linear-gradient(90deg, var(--brass), var(--brass2));
+    border-radius: 3px; transform-origin: left center;
+    transform: scaleX(0.35); transition: transform 0.6s cubic-bezier(.22,.61,.36,1);
+  }
+  /* default (no-JS / reduced-motion): underline already drawn */
+  .h-sec::after { transform: scaleX(1); }
+  /* when animating, collapse until the heading's reveal fires (.is-in added by JS) */
+  .js-anim .reveal .h-sec::after { transform: scaleX(0.35); }
+  .js-anim .reveal.is-in .h-sec::after { transform: scaleX(1); }
+
+  /* ---------- layout ---------- */
+  .wrap { width: 100%; max-width: 1180px; margin: 0 auto; padding-inline: clamp(1.1rem, 4vw, 2rem); }
+  section { position: relative; }
+  .pad-y { padding-block: clamp(4.5rem, 10vw, 8rem); }
+
+  /* ---------- skip nav ---------- */
+  .skip-link {
+    position: absolute; left: 1rem; top: -100px; z-index: 200;
+    background: var(--brass); color: #14110F; padding: 0.7rem 1.1rem;
+    font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 0.1em;
+    font-size: 0.8rem; border-radius: 3px; transition: top 0.2s ease;
+  }
+  .skip-link:focus { top: 1rem; }
+
+  /* ---------- focus-visible ---------- */
+  a:focus-visible, button:focus-visible, input:focus-visible,
+  select:focus-visible, textarea:focus-visible {
+    outline: 2px solid var(--brass); outline-offset: 3px; border-radius: 3px;
+  }
+
+  /* ---------- motifs ---------- */
+  .barber-stripe {
+    background-image: repeating-linear-gradient(45deg,
+      #C8A24A 0, #C8A24A 10px,
+      #6E2B2B 10px, #6E2B2B 20px,
+      #F2EDE4 20px, #F2EDE4 30px,
+      #14110F 30px, #14110F 40px);
+  }
+  .brass-line { height: 1px; background: linear-gradient(90deg, transparent, var(--brass) 50%, transparent); }
+  .leather-texture {
+    background-image:
+      radial-gradient(var(--texture-light) 1px, transparent 1px),
+      radial-gradient(var(--texture-dark) 1px, transparent 1px);
+    background-size: 6px 6px, 6px 6px;
+    background-position: 0 0, 3px 3px;
+  }
+
+  /* ---------- buttons ---------- */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+    font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 0.12em;
+    font-size: 0.86rem; font-weight: 600; cursor: pointer; border: 0;
+    padding: 0.95rem 1.6rem; border-radius: 4px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+  }
+  .btn-brass { background: var(--brass); color: #14110F; }
+  .btn-brass:hover { background: var(--brass2); transform: translateY(-2px); box-shadow: 0 12px 32px rgba(200,162,74,0.35); }
+  .btn-ghost { background: transparent; color: var(--ink); border: 1px solid var(--line-strong); }
+  .btn-ghost:hover { border-color: var(--brass); background: rgba(200,162,74,0.08); transform: translateY(-2px); }
+
+  /* ---------- cards (selective soft depth) ---------- */
+  .card {
+    background: linear-gradient(180deg, var(--surface) 0%, var(--surface2) 100%);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  .card:hover { transform: translateY(-6px); border-color: var(--line-strong); box-shadow: var(--shadow); }
+  /* glass accent — used in only 1–2 places */
+  .glass {
+    background: linear-gradient(160deg, rgba(255,255,255,0.06), rgba(255,255,255,0.01));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--line-strong);
+  }
+
+  /* ============================================================
+     NAVBAR
+     ============================================================ */
+  .nav {
+    position: fixed; inset: 0 0 auto 0; z-index: 100;
+    transition: background 0.3s ease, box-shadow 0.3s ease, backdrop-filter 0.3s ease;
+  }
+  .nav.solid {
+    background: var(--nav-bg);
+    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+  }
+  .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 72px; }
+  .brand { display: inline-flex; align-items: center; gap: 0.7rem; }
+  .brand .chip { width: 30px; height: 30px; border-radius: 3px; transform: rotate(12deg); box-shadow: 0 4px 12px rgba(0,0,0,0.4); flex: none; }
+  .brand .name { font-family: 'Bebas Neue', sans-serif; font-size: 1.65rem; letter-spacing: 0.06em; line-height: 1; }
+  .nav-links { display: none; align-items: center; gap: 2rem; font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.82rem; }
+  .nav-links a { color: var(--ink-soft); position: relative; padding-block: 0.3rem; }
+  .nav-links a:hover { color: var(--ink); }
+  .nav-links a::after { content: ''; position: absolute; left: 0; bottom: -2px; height: 2px; width: 0; background: var(--brass); transition: width 0.28s ease; }
+  .nav-links a:hover::after { width: 100%; }
+  .nav-cta { display: none; }
+  .hamburger { display: inline-flex; flex-direction: column; gap: 5px; background: transparent; border: 0; padding: 0.5rem; cursor: pointer; }
+  .hamburger span { display: block; width: 24px; height: 2px; background: var(--ink); border-radius: 2px; }
+
+  @media (min-width: 880px) {
+    .nav-links { display: flex; }
+    .nav-cta { display: inline-flex; }
+    .hamburger { display: none; }
+  }
+
+  /* mobile drawer */
+  .drawer {
+    position: fixed; inset: 0; z-index: 120;
+    background: var(--bg);
+    display: flex; flex-direction: column;
+    transition: transform 0.35s ease, opacity 0.35s ease;
+  }
+  .drawer.closed { transform: translateX(100%); opacity: 0; pointer-events: none; }
+  .drawer-top { display: flex; align-items: center; justify-content: space-between; height: 72px; padding-inline: 1.4rem; border-bottom: 1px solid var(--line); }
+  .drawer-close { background: transparent; border: 0; color: var(--ink); font-size: 2rem; line-height: 1; cursor: pointer; padding: 0.2rem 0.5rem; }
+  .drawer nav { display: flex; flex-direction: column; gap: 0.2rem; padding: 1.4rem; font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 0.14em; font-size: 1.05rem; }
+  .drawer nav a { padding-block: 0.85rem; border-bottom: 1px solid var(--line); color: var(--ink-soft); }
+  .drawer nav a.btn { border-bottom: 0; margin-top: 0.8rem; color: #14110F; }
+  @media (min-width: 880px) { .drawer { display: none; } }
+
+  /* ============================================================
+     HERO
+     ============================================================ */
+  .hero {
+    min-height: 100svh; display: flex; align-items: center;
+    padding-top: 6rem; padding-bottom: 4rem; overflow: hidden;
+    background:
+      radial-gradient(1200px 600px at 78% 8%, var(--hero-glow1), transparent 60%),
+      radial-gradient(900px 500px at 12% 92%, var(--hero-glow2), transparent 60%),
+      linear-gradient(160deg, var(--bg) 0%, var(--bg2) 55%, var(--bg) 100%);
+  }
+  /* REAL PHOTO LAYER — sits over the gradient. If img/hero.jpg is 404 the
+     layer simply stays transparent and the gradient below shows through. */
+  .hero-photo {
+    position: absolute; inset: 0; z-index: 0; pointer-events: none;
+    background-image: url('img/hero.jpg');
+    background-size: cover; background-position: center;
+    opacity: 0.42; will-change: transform;
+  }
+  /* readability scrim so headline/lede stay crisp over any photo */
+  .hero-scrim {
+    position: absolute; inset: 0; z-index: 0; pointer-events: none;
+    background:
+      linear-gradient(180deg, rgba(20,17,15,0.55) 0%, rgba(20,17,15,0.20) 35%, rgba(20,17,15,0.55) 100%),
+      linear-gradient(90deg, rgba(20,17,15,0.45) 0%, transparent 55%);
+  }
+  @media (prefers-color-scheme: light) {
+    .hero-photo { opacity: 0.30; }
+    .hero-scrim {
+      background:
+        linear-gradient(180deg, rgba(242,237,228,0.45) 0%, rgba(242,237,228,0.12) 35%, rgba(242,237,228,0.55) 100%),
+        linear-gradient(90deg, rgba(242,237,228,0.55) 0%, transparent 55%);
+    }
+  }
+  .hero > .wrap, .hero > .scroll-cue, .hero > .hero-edge { position: relative; z-index: 1; }
+
+  /* ---- cursor-follow glow (desktop only; toggled on by JS) ---- */
+  .cursor-glow {
+    position: absolute; top: 0; left: 0; z-index: 0; pointer-events: none;
+    width: 460px; height: 460px; margin: -230px 0 0 -230px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(200,162,74,0.20) 0%, rgba(200,162,74,0.07) 38%, transparent 70%);
+    opacity: 0; transition: opacity 0.45s ease;
+    will-change: transform; transform: translate3d(-9999px,-9999px,0);
+  }
+  .hero.glow-on .cursor-glow { opacity: 1; }
+
+  /* ---- SIGNATURE: scissors that "cut" down the page on scroll (desktop, perf-safe) ---- */
+  .cutrail { position: fixed; left: 22px; top: 0; height: 100vh; width: 28px; z-index: 35; display: none; pointer-events: none; }
+  @media (min-width: 1100px) and (pointer: fine) { .cutrail.on { display: block; } }
+  /* dashed line still to be cut (full height) */
+  .cutrail .rail-dash { position: absolute; left: 12px; top: 0; bottom: 0; width: 2px;
+    background: repeating-linear-gradient(to bottom, var(--brass) 0 7px, transparent 7px 16px); opacity: 0.22; }
+  /* the part already cut (top -> scissors): brass, glowing, split edges */
+  .cutrail .rail-cut { position: absolute; left: 11px; top: 0; width: 4px; height: 0; border-radius: 2px;
+    background: linear-gradient(180deg, var(--brass), #e9c474); box-shadow: 0 0 10px rgba(200,162,74,0.55); }
+  .cutrail .rail-cut::before, .cutrail .rail-cut::after { content: ''; position: absolute; bottom: 0; width: 1px; height: 20px; background: var(--brass); opacity: 0.4; transform-origin: bottom; }
+  .cutrail .rail-cut::before { left: -2px; transform: rotate(9deg); }
+  .cutrail .rail-cut::after { right: -2px; transform: rotate(-9deg); }
+  /* the scissors (snips only while scrolling) */
+  .cutrail .rail-sc { position: absolute; left: 0; top: -2px; width: 28px; height: 28px; color: var(--brass); filter: drop-shadow(0 2px 5px rgba(0,0,0,0.5)); will-change: transform; }
+  .cutrail .rail-sc .b { transform-box: fill-box; transform-origin: 14px 15px; transition: transform 0.12s ease; }
+  .cutrail.snip .rail-sc .bt { transform: rotate(-10deg); }
+  .cutrail.snip .rail-sc .bb { transform: rotate(10deg); }
+
+  .hero-edge { position: absolute; top: 0; right: 0; height: 100%; width: 8px; opacity: 0.7; }
+  .hero-edge.left { right: auto; left: 0; width: 4px; opacity: 0.4; display: none; }
+  @media (min-width: 640px) { .hero-edge.left { display: block; } }
+
+  .hero-grid { display: grid; gap: 3rem; align-items: center; }
+  @media (min-width: 1000px) { .hero-grid { grid-template-columns: 7fr 5fr; } }
+
+  .hero h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(3.6rem, 15vw, 9.5rem);
+    line-height: 0.84; letter-spacing: 0.02em;
+    text-shadow: 0 2px 24px rgba(0,0,0,0.35);
+  }
+  .hero h1 .brass { color: var(--brass); }
+  .hero .lede { margin-top: 1.4rem; max-width: 34rem; font-size: clamp(1rem, 2.4vw, 1.18rem); color: var(--ink-soft); }
+  .hero-cta { margin-top: 2.1rem; display: flex; flex-wrap: wrap; gap: 0.9rem; }
+
+  /* trust signal row (above the fold) */
+  .trust { margin-top: 2.6rem; display: flex; flex-wrap: wrap; align-items: flex-end; gap: 1.2rem 1.8rem; }
+  .trust .stat .num { font-family: 'Bebas Neue', sans-serif; font-size: 2.4rem; line-height: 1; }
+  .trust .stat .num.brass { color: var(--brass); }
+  .trust .stat .lbl { font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 0.16em; font-size: 0.68rem; color: var(--ink-faint); margin-top: 0.3rem; }
+  .trust .div { width: 1px; align-self: stretch; background: var(--line-strong); opacity: 0.5; }
+  @media (max-width: 480px) { .trust .div { display: none; } }
+
+  /* hero emblem panel (glass accent #1) */
+  .emblem { display: none; }
+  @media (min-width: 1000px) {
+    .emblem { display: flex; justify-content: center; }
+    .emblem-card { position: relative; width: 330px; height: 430px; border-radius: 12px; display: flex; align-items: center; justify-content: center; text-align: center; }
+    .emblem-card .frame { position: absolute; inset: 12px; border: 1px solid var(--line-strong); border-radius: 8px; }
+  }
+
+  /* kinetic stagger reveal for hero words (JS-driven; reduced-motion safe) */
+  .kin { display: inline-block; }
+  .js-anim .kin { opacity: 0; transform: translateY(0.4em); }
+
+  /* social-proof strip near hero */
+  .proof-strip {
+    display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 0.6rem 1.6rem;
+    padding: 1rem clamp(1.1rem, 4vw, 2rem);
+    border-block: 1px solid var(--line);
+    background: var(--surface2);
+    font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 0.12em;
+    font-size: 0.76rem; color: var(--ink-soft);
+  }
+  .proof-strip .stars { color: var(--brass); letter-spacing: 0.05em; }
+  .proof-strip .dot { width: 4px; height: 4px; border-radius: 50%; background: var(--line-strong); }
+
+  /* ============================================================
+     SECTION HEADERS
+     ============================================================ */
+  .sec-head { max-width: 40rem; margin-bottom: clamp(2.2rem, 5vw, 3.5rem); }
+  .sec-head .eyebrow { display: block; margin-bottom: 0.7rem; }
+  .sec-head p { color: var(--ink-soft); margin-top: 0.9rem; font-size: 0.98rem; }
+  .note { color: var(--ink-faint); font-size: 0.86rem; margin-top: 0.8rem; }
+  .note b { color: var(--brass); font-weight: 600; }
+  .stripe-top { position: absolute; inset: 0 0 auto 0; height: 4px; opacity: 0.6; }
+
+  /* ============================================================
+     BENTO SERVICES
+     ============================================================ */
+  .bento { display: grid; gap: 1rem; grid-template-columns: 1fr; }
+  @media (min-width: 620px) { .bento { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 980px) { .bento { grid-template-columns: repeat(4, 1fr); grid-auto-rows: 1fr; } }
+
+  .svc { padding: clamp(1.4rem, 3vw, 1.9rem); display: flex; flex-direction: column; }
+  .svc .top { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 1.1rem; }
+  .svc .ico { font-size: 2.4rem; line-height: 1; }
+  .svc .pole { width: 30px; height: 30px; border-radius: 3px; transform: rotate(12deg); opacity: 0.5; transition: opacity 0.3s ease; }
+  .svc:hover .pole { opacity: 0.9; }
+  .svc h3 { font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 0.04em; font-size: 1.15rem; margin-bottom: 0.5rem; }
+  .svc p { color: var(--ink-soft); font-size: 0.9rem; flex: 1; }
+  .svc .foot { display: flex; align-items: center; justify-content: space-between; margin-top: 1.2rem; padding-top: 1rem; border-top: 1px solid var(--line); }
+  .svc .foot .price { font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.68rem; color: var(--brass); }
+  .svc .foot .go { font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.68rem; color: var(--ink-soft); display: inline-flex; align-items: center; gap: 0.35em; transition: color 0.2s ease, gap 0.2s ease; }
+  .svc .foot .go:hover { color: var(--brass); gap: 0.65em; }
+  .svc .ico { transition: transform 0.3s cubic-bezier(.22,.61,.36,1); transform-origin: left center; }
+  .svc:hover .ico { transform: translateY(-3px) scale(1.06); }
+  /* featured tile: soft brass aura on hover for a premium focal point */
+  .svc.feat { position: relative; overflow: hidden; }
+  .svc.feat::before {
+    content: ''; position: absolute; inset: 0; pointer-events: none;
+    background: radial-gradient(420px 320px at 12% 0%, rgba(200,162,74,0.14), transparent 60%);
+    opacity: 0; transition: opacity 0.4s ease;
+  }
+  .svc.feat:hover::before { opacity: 1; }
+  /* bento emphasis — featured + wide tiles span more */
+  @media (min-width: 980px) {
+    .svc.feat { grid-column: span 2; grid-row: span 2; }
+    .svc.feat .ico { font-size: 3.4rem; }
+    .svc.feat h3 { font-size: 1.6rem; }
+    .svc.feat p { font-size: 1rem; }
+    .svc.wide { grid-column: span 2; }
+  }
+
+  /* ============================================================
+     WHY US
+     ============================================================ */
+  .why-grid { display: grid; gap: 1rem; grid-template-columns: 1fr; }
+  @media (min-width: 620px) { .why-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 980px) { .why-grid { grid-template-columns: repeat(4, 1fr); } }
+  .why { padding: 1.7rem; }
+  .why .ico { font-size: 2.2rem; margin-bottom: 1rem; }
+  .why h3 { font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 0.04em; font-size: 1.05rem; margin-bottom: 0.5rem; }
+  .why p { color: var(--ink-soft); font-size: 0.88rem; }
+
+  /* ============================================================
+     GALLERY (CSS placeholders, no stock photos)
+     ============================================================ */
+  .gal { display: grid; gap: 0.8rem; grid-template-columns: repeat(2, 1fr); }
+  @media (min-width: 720px) { .gal { grid-template-columns: repeat(3, 1fr); } }
+  @media (min-width: 1000px) { .gal { grid-template-columns: repeat(4, 1fr); } }
+  .tile {
+    position: relative; aspect-ratio: 1; border-radius: 10px; overflow: hidden;
+    border: 1px solid var(--line);
+    transition: transform 0.4s ease, filter 0.4s ease;
+  }
+  .tile:hover { transform: scale(1.03); filter: brightness(1.1); }
+  /* REAL PHOTO LAYER over each tile's gradient fallback. If the file is 404,
+     this layer is transparent and the gradient (set inline on .tile) shows. */
+  .tile .photo {
+    position: absolute; inset: 0; z-index: 0;
+    background-size: cover; background-position: center;
+  }
+  .tile .lbl, .tile .hint { position: absolute; z-index: 1; }
+  .tile .lbl {
+    position: absolute; left: 0.7rem; bottom: 0.7rem;
+    font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 0.14em;
+    font-size: 0.62rem; color: #F2EDE4; background: rgba(20,17,15,0.6);
+    backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
+    padding: 0.25rem 0.55rem; border-radius: 4px;
+  }
+  .tile .hint { position: absolute; top: 0.6rem; right: 0.7rem; font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.58rem; color: rgba(242,237,228,0.4); }
+
+  /* ============================================================
+     REVIEWS / BENEFITS
+     ============================================================ */
+  .rev-grid { display: grid; gap: 1rem; grid-template-columns: 1fr; }
+  @media (min-width: 760px) { .rev-grid { grid-template-columns: repeat(3, 1fr); } }
+  .rev { padding: 1.8rem; }
+  .rev .stars { color: var(--brass); font-size: 1.1rem; margin-bottom: 1rem; letter-spacing: 0.08em; }
+  .rev .stars .off { color: var(--line-strong); }
+  .rev p { color: var(--ink-soft); font-size: 0.92rem; margin-bottom: 1.2rem; }
+  .rev .who { display: flex; align-items: center; gap: 0.75rem; }
+  .rev .who .av { width: 36px; height: 36px; border-radius: 50%; background: rgba(110,43,43,0.4); border: 1px solid var(--line-strong); display: flex; align-items: center; justify-content: center; font-family: 'Oswald', sans-serif; font-size: 0.85rem; }
+  .rev .who .nm { font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.74rem; color: var(--ink-soft); }
+
+  /* ============================================================
+     CONTACT
+     ============================================================ */
+  .contact-grid { display: grid; gap: 3rem; grid-template-columns: 1fr; }
+  @media (min-width: 980px) { .contact-grid { grid-template-columns: 1fr 1fr; } }
+  .info-row { display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.3rem; }
+  .info-row .ic { color: var(--brass); font-size: 1.25rem; line-height: 1.4; }
+  .info-row .k { font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.78rem; }
+  .info-row .v { color: var(--ink-soft); font-size: 0.9rem; }
+  .info-row a.v:hover { color: var(--brass); }
+  .map-wrap { border-radius: 10px; overflow: hidden; border: 1px solid var(--line); margin-top: 0.5rem; }
+  .map-wrap iframe { filter: grayscale(0.35) contrast(1.05); }
+
+  .form { padding: clamp(1.6rem, 4vw, 2.3rem); }
+  .form h3 { font-family: 'Bebas Neue', sans-serif; font-size: 2.2rem; letter-spacing: 0.04em; }
+  .form .sub { color: var(--ink-faint); font-size: 0.88rem; margin-top: 0.4rem; margin-bottom: 1.3rem; }
+  .field { margin-bottom: 1.1rem; }
+  .field label { display: block; font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.7rem; color: var(--ink-soft); margin-bottom: 0.45rem; }
+  .field input, .field select, .field textarea {
+    width: 100%; background: var(--bg); color: var(--ink);
+    border: 1px solid var(--line-strong); border-radius: 5px;
+    padding: 0.8rem 0.9rem; font-family: 'Inter', sans-serif; font-size: 0.95rem;
+    transition: border-color 0.2s ease;
+  }
+  .field input::placeholder, .field textarea::placeholder { color: var(--ink-faint); }
+  .field input:focus, .field select:focus, .field textarea:focus { border-color: var(--brass); outline: none; }
+  .field textarea { resize: vertical; }
+  .form .alt { text-align: center; color: var(--ink-faint); font-size: 0.8rem; margin-top: 0.9rem; }
+  .form .alt a { color: var(--brass); text-decoration: underline; }
+
+  /* ============================================================
+     FOOTER
+     ============================================================ */
+  footer { background: var(--bg2); border-top: 1px solid var(--line); padding-top: 3.5rem; padding-bottom: 2rem; }
+  .foot-grid { display: grid; gap: 2.4rem; grid-template-columns: 1fr; margin-bottom: 2.5rem; }
+  @media (min-width: 760px) { .foot-grid { grid-template-columns: 1.4fr 1fr 1fr; } }
+  .foot-grid h4 { font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.72rem; color: var(--brass); margin-bottom: 1rem; }
+  .foot-grid ul li { margin-bottom: 0.55rem; color: var(--ink-soft); font-size: 0.9rem; }
+  .foot-grid ul a:hover { color: var(--brass); }
+  .foot-bottom { display: flex; flex-direction: column; gap: 0.8rem; align-items: center; text-align: center; }
+  @media (min-width: 640px) { .foot-bottom { flex-direction: row; justify-content: space-between; text-align: left; } }
+  .foot-bottom p { color: var(--ink-faint); font-size: 0.72rem; }
+  .foot-bottom .honesty { font-size: 0.68rem; max-width: 30rem; opacity: 0.85; }
+
+  /* ============================================================
+     STICKY MOBILE CTA BAR (mobile only)
+     ============================================================ */
+  .mobile-cta {
+    position: fixed; inset: auto 0 0 0; z-index: 90;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem;
+    padding: 0.7rem 0.8rem calc(0.7rem + env(safe-area-inset-bottom, 0));
+    background: var(--nav-bg);
+    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+    border-top: 1px solid var(--line-strong);
+    box-shadow: 0 -8px 30px rgba(0,0,0,0.3);
+  }
+  .mobile-cta a { padding: 0.85rem; font-size: 0.82rem; border-radius: 6px; }
+  .mobile-cta .wa { background: #25D366; color: #fff; }
+  @media (min-width: 880px) { .mobile-cta { display: none; } }
+  /* lift floating whatsapp + give body bottom room on mobile so bar never covers content */
+  @media (max-width: 879px) { body { padding-bottom: 4.5rem; } }
+
+  /* ============================================================
+     FLOATING WHATSAPP (desktop emphasis) + TOAST
+     ============================================================ */
+  .wa-float {
+    position: fixed; right: 1.2rem; bottom: 1.2rem; z-index: 95;
+    width: 56px; height: 56px; border-radius: 50%;
+    display: none; align-items: center; justify-content: center;
+    background: #25D366; color: #fff; box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+    transition: transform 0.2s ease;
+  }
+  .wa-float:hover { transform: scale(1.1); }
+  @media (min-width: 880px) { .wa-float { display: flex; } }
+  @keyframes pulseRing { 0%{box-shadow:0 0 0 0 rgba(37,211,102,.5)} 70%{box-shadow:0 0 0 16px rgba(37,211,102,0)} 100%{box-shadow:0 0 0 0 rgba(37,211,102,0)} }
+  .wa-pulse { animation: pulseRing 2.4s infinite; }
+
+  .toast {
+    position: fixed; left: 50%; bottom: 6rem; z-index: 130;
+    transform: translate(-50%, 12px); opacity: 0; pointer-events: none;
+    transition: opacity 0.35s ease, transform 0.35s ease;
+  }
+  .toast.show { opacity: 1; transform: translate(-50%, 0); pointer-events: auto; }
+  .toast .box {
+    background: var(--brass); color: #14110F;
+    font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 0.08em;
+    font-size: 0.85rem; padding: 0.8rem 1.4rem; border-radius: 6px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.4); display: flex; align-items: center; gap: 0.5rem;
+  }
+
+  /* scroll cue */
+  .scroll-cue {
+    position: absolute; left: 50%; bottom: 1.4rem; transform: translateX(-50%);
+    font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 0.16em;
+    font-size: 0.66rem; color: var(--ink-faint); display: none;
+  }
+  @media (min-width: 640px) and (min-height: 640px) { .scroll-cue { display: block; } }
+  @keyframes scrollNudge { 0%,100%{ transform:translate(-50%,0); opacity:.4 } 50%{ transform:translate(-50%,6px); opacity:.85 } }
+
+  /* ============================================================
+     REVEAL — content visible by default; JS hides only when animating
+     ============================================================ */
+  .reveal { opacity: 1; transform: none; }
+  .js-anim .reveal { opacity: 0; transform: translateY(26px); }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .js-anim .reveal, .js-anim .kin { opacity: 1 !important; transform: none !important; }
+    .wa-pulse, .scroll-cue { animation: none !important; }
+    .h-sec::after { transform: scaleX(1) !important; transition: none !important; }
+    .svc:hover .ico { transform: none !important; }
+    .svc .foot .go:hover { gap: 0.35em !important; }
+    /* kill all decorative signature / parallax / glow motion */
+    .cutrail { display: none !important; }
+    .hero-photo { transform: none !important; }
+    .cursor-glow { display: none !important; }
+  }
+  /* non-reduced motion: gentle cue bounce */
+  @media (prefers-reduced-motion: no-preference) {
+    .scroll-cue { animation: scrollNudge 2.2s ease-in-out infinite; }
+  }
+</style>
+</head>
+
+<body>
+<a href="#main" class="skip-link">İçeriğe atla</a>
+
+<!-- ============ NAVBAR ============ -->
+<header id="navbar" class="nav">
+  <div class="wrap nav-inner">
+    <a href="#hero" class="brand">
+      <span class="chip barber-stripe" aria-hidden="true"></span>
+      <span class="name" data-cfg="ad">KESKİN</span>
+    </a>
+
+    <nav class="nav-links" aria-label="Ana menü">
+      <a href="#hizmetler">Hizmetler</a>
+      <a href="#neden-biz">Neden Biz</a>
+      <a href="#galeri">Galeri</a>
+      <a href="#yorumlar">Yorumlar</a>
+      <a href="#iletisim">İletişim</a>
+    </nav>
+
+    <a href="#iletisim" class="btn btn-brass nav-cta">Randevu Al</a>
+
+    <button id="hamburger" class="hamburger" aria-label="Menüyü aç" aria-controls="drawer" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="brass-line" style="opacity:.4"></div>
+</header>
+
+<!-- ============ MOBILE DRAWER ============ -->
+<div id="drawer" class="drawer closed" role="dialog" aria-modal="true" aria-label="Menü">
+  <div class="drawer-top">
+    <span class="name" data-cfg="ad">KESKİN</span>
+    <button id="closeMenu" class="drawer-close" aria-label="Menüyü kapat">&times;</button>
+  </div>
+  <nav>
+    <a href="#hizmetler" class="mob-link">Hizmetler</a>
+    <a href="#neden-biz" class="mob-link">Neden Biz</a>
+    <a href="#galeri" class="mob-link">Galeri</a>
+    <a href="#yorumlar" class="mob-link">Yorumlar</a>
+    <a href="#iletisim" class="mob-link">İletişim</a>
+    <a href="#iletisim" class="mob-link btn btn-brass">Randevu Al</a>
+  </nav>
+</div>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<section id="hero" class="hero leather-texture">
+  <!-- real photo layer (img/hero.jpg) over gradient; transparent if 404 -->
+  <div id="heroPhoto" class="hero-photo" aria-hidden="true"></div>
+  <div class="hero-scrim" aria-hidden="true"></div>
+  <!-- cursor-follow glow (desktop only, enabled by JS) -->
+  <div id="cursorGlow" class="cursor-glow" aria-hidden="true"></div>
+
+  <!-- signature: a scissors that travels down a dashed "cut line" as you scroll, cutting it -->
+  <div id="cutrail" class="cutrail" aria-hidden="true">
+    <span class="rail-dash"></span>
+    <span class="rail-cut"></span>
+    <svg class="rail-sc" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g class="b bt">
+        <circle cx="8" cy="7" r="3.2" stroke="currentColor" stroke-width="1.6"/>
+        <path d="M9.7 9.1 L18.4 24" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+      </g>
+      <g class="b bb">
+        <circle cx="20" cy="7" r="3.2" stroke="currentColor" stroke-width="1.6"/>
+        <path d="M18.3 9.1 L9.6 24" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+      </g>
+      <circle cx="14" cy="15" r="1.25" fill="currentColor"/>
+    </svg>
+  </div>
+  <script>
+  (function(){
+    var rail = document.getElementById('cutrail');
+    if (!rail) return;
+    var fine = window.matchMedia('(min-width:1100px) and (pointer:fine)').matches;
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!fine || reduce) return;           // mobil + reduced-motion: hic calismaz
+    rail.classList.add('on');
+    var sc = rail.querySelector('.rail-sc'), cut = rail.querySelector('.rail-cut');
+    var ticking = false, snipT;
+    function update(){
+      ticking = false;
+      var max = (document.documentElement.scrollHeight - window.innerHeight) || 1;
+      var p = Math.min(1, Math.max(0, window.scrollY / max));
+      var y = p * (window.innerHeight - 30);
+      sc.style.transform = 'translate3d(0,' + y + 'px,0)';   // transform-only -> 0 jank
+      cut.style.height = (y + 14) + 'px';
+    }
+    function onScroll(){
+      if (!ticking){ ticking = true; requestAnimationFrame(update); }
+      rail.classList.add('snip');                              // snip yalnizca kaydirirken
+      clearTimeout(snipT); snipT = setTimeout(function(){ rail.classList.remove('snip'); }, 130);
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', function(){ requestAnimationFrame(update); });
+    window.addEventListener('load', update);
+    update();
+  })();
+  </script>
+
+  <div class="hero-edge barber-stripe" aria-hidden="true"></div>
+  <div class="hero-edge left barber-stripe" aria-hidden="true"></div>
+
+  <div class="wrap hero-grid">
+    <div>
+      <p class="reveal eyebrow" style="letter-spacing:.35em">Moda • Kadıköy • Est. 2015</p>
+      <h1 class="reveal" aria-label="KESKİN BARBER">
+        <span class="kin-line" data-text data-cfg="ad-hero">KESKİN</span><br />
+        <span class="kin-line brass" data-text>BARBER</span>
+      </h1>
+      <p class="reveal lede" data-cfg="tagline">Keskin çizgiler. Net iş. Erkeğin hak ettiği bakım.</p>
+
+      <div class="reveal hero-cta">
+        <a id="heroWa" href="#iletisim" class="btn btn-brass">💈 Randevu Al</a>
+        <a href="#hizmetler" class="btn btn-ghost">Hizmetleri Gör</a>
+      </div>
+
+      <div class="reveal trust">
+        <div class="stat">
+          <div class="num brass"><span data-cfg="puan">4.9</span><span aria-hidden="true">★</span></div>
+          <div class="lbl">Google Puanı</div>
+        </div>
+        <div class="div" aria-hidden="true"></div>
+        <div class="stat">
+          <div class="num">500<span class="brass">+</span></div>
+          <div class="lbl">Mutlu Müşteri</div>
+        </div>
+        <div class="div" aria-hidden="true"></div>
+        <div class="stat">
+          <div class="num">9<span class="brass">+</span></div>
+          <div class="lbl">Yıllık Tecrübe</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- glass emblem panel (accent #1) -->
+    <div class="reveal emblem" aria-hidden="true">
+      <div class="emblem-card glass">
+        <div class="frame"></div>
+        <div style="padding:0 2rem">
+          <div style="font-size:4.2rem;margin-bottom:0.8rem">💈</div>
+          <div class="font-display brass" style="font-size:3.2rem;letter-spacing:.06em;color:var(--brass)">USTURA</div>
+          <div class="eyebrow" style="display:block;margin-top:0.6rem">Sıcak Havlu Tıraşı</div>
+          <div class="brass-line" style="width:64px;margin:1.4rem auto"></div>
+          <p style="color:var(--ink-soft);font-size:0.88rem;margin-top:0.4rem">Klasik ritüel, modern hassasiyet. Her detay önemli.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-cue">↓ Kaydır</div>
+</section>
+
+<!-- ============ SOCIAL PROOF STRIP ============ -->
+<div class="proof-strip" aria-label="Sosyal kanıt">
+  <span><span class="stars">★★★★★</span> <span data-cfg="puan-strip">4.9</span>/5 Google</span>
+  <span class="dot" aria-hidden="true"></span>
+  <span>500+ Mutlu Müşteri</span>
+  <span class="dot" aria-hidden="true"></span>
+  <span>Randevuyla Net İş</span>
+  <span class="dot" aria-hidden="true"></span>
+  <span>Sıcak Havlu Ustura Ritüeli</span>
+</div>
+
+<!-- ============ HİZMETLER (BENTO) ============ -->
+<section id="hizmetler" class="pad-y" style="background:var(--bg)">
+  <div class="wrap">
+    <div class="reveal sec-head">
+      <span class="eyebrow">Ne Yapıyoruz</span>
+      <h2 class="h-sec">HİZMETLER</h2>
+      <p>Her hizmet, işinin ehli ustalar tarafından. Fiyatlar net iş kalitesine göre — güncel fiyat için WhatsApp.</p>
+    </div>
+    <div class="bento" id="serviceGrid"></div>
+  </div>
+</section>
+
+<!-- ============ NEDEN BİZ ============ -->
+<section id="neden-biz" class="pad-y leather-texture" style="background:var(--bg2)">
+  <div class="stripe-top barber-stripe" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="reveal sec-head">
+      <span class="eyebrow">Farkımız</span>
+      <h2 class="h-sec">NEDEN KESKİN</h2>
+    </div>
+    <div class="why-grid">
+      <div class="reveal card why">
+        <div class="ico">✂️</div>
+        <h3>Usta İşçilik</h3>
+        <p>Yıllarca pratiğini yapmış, makas ve usturaya hakim ekip. Her kesim ölçülü, her çizgi net.</p>
+      </div>
+      <div class="reveal card why">
+        <div class="ico">🧖‍♂️</div>
+        <h3>Klasik Ritüel</h3>
+        <p>Sıcak havlu, köpük, ustura. Berberliğin asıl deneyimini modern hijyenle yaşa.</p>
+      </div>
+      <div class="reveal card why">
+        <div class="ico">🧴</div>
+        <h3>Kaliteli Ürün</h3>
+        <p>Cilde ve saça dost, profesyonel bakım ürünleri. Salonun kokusu kadar his de premium.</p>
+      </div>
+      <div class="reveal card why">
+        <div class="ico">⏱️</div>
+        <h3>Randevuyla Net</h3>
+        <p>Kuyrukta bekleme yok. WhatsApp'tan randevu, dakikası dakikasına hizmet.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALERİ ============ -->
+<section id="galeri" class="pad-y" style="background:var(--bg)">
+  <div class="wrap">
+    <div class="reveal sec-head">
+      <span class="eyebrow">İşlerimiz</span>
+      <h2 class="h-sec">GALERİ</h2>
+      <p class="note"><b>Not:</b> Aşağıdaki kareler yer tutucudur — bunları kendi çalışmalarınızın gerçek fotoğraflarıyla değiştirin.</p>
+    </div>
+    <div class="gal" id="galleryGrid"></div>
+  </div>
+</section>
+
+<!-- ============ YORUMLAR ============ -->
+<section id="yorumlar" class="pad-y leather-texture" style="background:var(--bg2)">
+  <div class="stripe-top barber-stripe" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="reveal sec-head">
+      <span class="eyebrow">Müşteri Sözü</span>
+      <h2 class="h-sec">YORUMLAR</h2>
+      <p class="note"><b>Örnek yorumlardır</b> — yayına almadan önce gerçek müşteri yorumlarınızla değiştirin.</p>
+    </div>
+    <div class="rev-grid" id="reviewGrid"></div>
+  </div>
+</section>
+
+<!-- ============ İLETİŞİM ============ -->
+<section id="iletisim" class="pad-y" style="background:var(--bg)">
+  <div class="wrap contact-grid">
+    <div class="reveal">
+      <span class="eyebrow">Bize Ulaş</span>
+      <h2 class="h-sec" style="margin-block:.6rem 1.6rem">İLETİŞİM</h2>
+
+      <div class="info-row">
+        <span class="ic" aria-hidden="true">📍</span>
+        <div>
+          <div class="k">Adres</div>
+          <div class="v" data-cfg="adres">Moda Cad. No: __, Moda, Kadıköy / İstanbul</div>
+        </div>
+      </div>
+      <div class="info-row">
+        <span class="ic" aria-hidden="true">📞</span>
+        <div>
+          <div class="k">Telefon</div>
+          <a href="#" data-cfg-tel class="v" data-cfg="telefon">+90 5__ ___ __ __</a>
+        </div>
+      </div>
+      <div class="info-row">
+        <span class="ic" aria-hidden="true">🕐</span>
+        <div>
+          <div class="k">Çalışma Saatleri</div>
+          <div class="v">Pzt–Cmt: 10:00 – 21:00<br />Pazar: 11:00 – 19:00</div>
+        </div>
+      </div>
+      <div class="info-row">
+        <span class="ic" aria-hidden="true">📷</span>
+        <div>
+          <div class="k">Instagram</div>
+          <span class="v" data-cfg="instagram">@keskinbarber</span>
+        </div>
+      </div>
+
+      <div class="map-wrap">
+        <iframe id="mapFrame" title="Konum — Moda, Kadıköy"
+          src="https://www.google.com/maps?q=Moda%2C%20Kad%C4%B1k%C3%B6y%2C%20%C4%B0stanbul&output=embed"
+          width="100%" height="280" style="border:0" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <form id="contactForm" class="card form" novalidate>
+        <h3>RANDEVU TALEBİ</h3>
+        <p class="sub">Formu doldur, en kısa sürede WhatsApp'tan dönelim.</p>
+
+        <div class="field">
+          <label for="f-ad">Ad Soyad</label>
+          <input id="f-ad" name="ad" required type="text" autocomplete="name" placeholder="Adınız" />
+        </div>
+        <div class="field">
+          <label for="f-tel">Telefon</label>
+          <input id="f-tel" name="telefon" required type="tel" autocomplete="tel" placeholder="05__ ___ __ __" />
+        </div>
+        <div class="field">
+          <label for="f-hizmet">Hizmet</label>
+          <select id="f-hizmet" name="hizmet"></select>
+        </div>
+        <div class="field">
+          <label for="f-mesaj">Mesaj (opsiyonel)</label>
+          <textarea id="f-mesaj" name="mesaj" rows="3" placeholder="Tercih ettiğiniz gün / saat..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-brass" style="width:100%">Talebi Gönder</button>
+        <p class="alt">Ya da direkt <a href="#" data-cfg-wa>WhatsApp'tan yaz</a></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="brand" style="margin-bottom:1rem">
+          <span class="chip barber-stripe" style="width:26px;height:26px" aria-hidden="true"></span>
+          <span class="name" data-cfg="ad">KESKİN</span>
+        </div>
+        <p style="color:var(--ink-soft);font-size:0.9rem;max-width:22rem" data-cfg="tagline">Keskin çizgiler. Net iş. Erkeğin hak ettiği bakım.</p>
+      </div>
+      <div>
+        <h4>Menü</h4>
+        <ul>
+          <li><a href="#hizmetler">Hizmetler</a></li>
+          <li><a href="#neden-biz">Neden Biz</a></li>
+          <li><a href="#galeri">Galeri</a></li>
+          <li><a href="#iletisim">İletişim</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>İletişim</h4>
+        <ul>
+          <li data-cfg="adres">Moda, Kadıköy / İstanbul</li>
+          <li><a href="#" data-cfg-tel data-cfg="telefon">+90 5__ ___ __ __</a></li>
+          <li><span data-cfg="instagram">@keskinbarber</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="brass-line" style="opacity:.3;margin-bottom:1.4rem"></div>
+    <div class="foot-bottom">
+      <p>© <span id="year"></span> <span data-cfg="ad">KESKİN</span> Barbershop. Tüm hakları saklıdır.</p>
+      <p class="honesty">Bu sayfa <span data-cfg="ad">KESKİN</span> için hazırlanmış bir TANITIM ÖNİZLEMESİDİR — resmi site değildir.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ STICKY MOBILE CTA ============ -->
+<div class="mobile-cta">
+  <a href="#iletisim" class="btn btn-brass">💈 Randevu Al</a>
+  <a href="#" data-cfg-wa class="btn wa" target="_blank" rel="noopener">WhatsApp</a>
+</div>
+
+<!-- ============ FLOATING WHATSAPP (desktop) ============ -->
+<a id="waFloat" href="#" data-cfg-wa target="_blank" rel="noopener" aria-label="WhatsApp'tan yaz" class="wa-float wa-pulse">
+  <svg viewBox="0 0 32 32" width="26" height="26" fill="currentColor" aria-hidden="true"><path d="M16 .5C7.4.5.5 7.4.5 16c0 2.8.7 5.4 2.1 7.8L.5 31.5l7.9-2.1c2.3 1.2 4.9 1.9 7.6 1.9 8.6 0 15.5-6.9 15.5-15.5S24.6.5 16 .5zm0 28c-2.4 0-4.7-.6-6.7-1.8l-.5-.3-4.7 1.2 1.3-4.6-.3-.5c-1.3-2.1-2-4.5-2-7 0-7.1 5.8-12.9 13-12.9 3.4 0 6.7 1.3 9.1 3.8 2.4 2.4 3.8 5.7 3.8 9.1 0 7.2-5.8 13-12.9 13zm7.1-9.7c-.4-.2-2.3-1.1-2.6-1.3-.3-.1-.6-.2-.8.2-.2.4-.9 1.3-1.2 1.5-.2.2-.4.3-.8.1-.4-.2-1.6-.6-3.1-1.9-1.1-1-1.9-2.3-2.1-2.7-.2-.4 0-.6.2-.8.2-.2.4-.4.5-.7.2-.2.2-.4.4-.7.1-.3 0-.5 0-.7-.1-.2-.8-2-1.1-2.7-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.5-.3.4-1.2 1.2-1.2 2.9s1.2 3.4 1.4 3.6c.2.2 2.5 3.8 6 5.3.8.4 1.5.6 2 .8.8.3 1.6.2 2.2.1.7-.1 2.3-.9 2.6-1.8.3-.9.3-1.6.2-1.8-.1-.2-.3-.3-.7-.5z"/></svg>
+</a>
+
+<!-- ============ TOAST ============ -->
+<div id="toast" class="toast" role="status" aria-live="polite">
+  <div class="box"><span aria-hidden="true">✓</span><span id="toastMsg">Talebiniz alındı!</span></div>
+</div>
+
+<!-- GSAP + ScrollTrigger + Lenis (deferred) -->
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+
+<script>
+  /* ============================================================
+     === BURAYI DEGISTIR: gercek salon bilgileriyle 60 saniyede kisisellestir ===
+     ============================================================ */
+  const SALON = {
+    ad: 'KESKİN',
+    tagline: 'Keskin çizgiler. Net iş. Erkeğin hak ettiği bakım.',
+    telefon: '+90 5__ ___ __ __',        // ACIKCA placeholder — gercek numarayi yaz
+    whatsapp: '905XXXXXXXXX',             // 90 + numara, bosluksuz (orn: 905321112233)
+    adres: 'Moda Cad. No: __, Moda, Kadıköy / İstanbul',
+    instagram: '@keskinbarber',
+    mapsQuery: 'Moda, Kadıköy, İstanbul',
+    googlePuani: '4.9',
+  };
+
+  // Hizmetler — fiyat alani bilerek "WhatsApp'tan"; size = bento boyutu (feat/wide/normal)
+  const HIZMETLER = [
+    { ad: 'Saç + Sakal Paketi',  ico: '💈', desc: 'Komple bakım ritüeli: kesim ve sakal şekillendirme birlikte. En çok tercih edilen avantajlı paket.', size: 'feat' },
+    { ad: 'Saç Kesim',           ico: '✂️', desc: 'Yüz hatlarına göre makas ve makine ile şekillendirme. Net çizgiler, temiz bitiş.', size: '' },
+    { ad: 'Sakal Şekillendirme', ico: '🧔', desc: 'Sakal hattının ustura ile hassas tasarımı, bakım ve modelleme.', size: '' },
+    { ad: 'Ustura Tıraş',        ico: '🪒', desc: 'Sıcak havlu + köpük + klasik ustura. Pürüzsüz, ferahlatıcı geleneksel ritüel.', size: 'wide' },
+    { ad: 'Yüz Bakımı',          ico: '🧖', desc: 'Cilt temizliği ve canlandırıcı bakım. Maske, masaj ve ferahlık.', size: '' },
+    { ad: 'Çocuk Kesim',         ico: '🧒', desc: 'Küçük beyler için sabırlı, eğlenceli ve özenli kesim deneyimi.', size: '' },
+  ];
+
+  // === ornek yorumlar — gercegiyle degistir (gercek musteri yorumlarini buraya koy) ===
+  const YORUMLAR = [
+    { ad: 'Örnek Müşteri', not: 5, txt: 'Sakal şekillendirme konusunda gerçekten ustalar. Detaycı ve temiz iş çıkarıyorlar.' },
+    { ad: 'Örnek Müşteri', not: 5, txt: 'Sıcak havlu ustura tıraşı bambaşka bir deneyim. Salonun atmosferi de çok hoş.' },
+    { ad: 'Örnek Müşteri', not: 5, txt: 'Randevuyla gittim, hiç beklemedim. Kesim tam istediğim gibi oldu. Tavsiye ederim.' },
+  ];
+
+  /* ---------- inject CONFIG into DOM ---------- */
+  function applyConfig() {
+    const map = { ad: SALON.ad, 'ad-hero': SALON.ad, tagline: SALON.tagline, telefon: SALON.telefon, adres: SALON.adres, instagram: SALON.instagram, puan: SALON.googlePuani, 'puan-strip': SALON.googlePuani };
+    document.querySelectorAll('[data-cfg]').forEach(el => {
+      const k = el.getAttribute('data-cfg');
+      if (k in map) el.textContent = map[k];
+    });
+
+    const waUrl = 'https://wa.me/' + SALON.whatsapp.replace(/\D/g,'') + '?text=' + encodeURIComponent('Merhaba, ' + SALON.ad + ' için randevu almak istiyorum.');
+    document.querySelectorAll('[data-cfg-wa]').forEach(a => { a.href = waUrl; a.target = '_blank'; a.rel = 'noopener'; });
+    document.querySelectorAll('[data-cfg-tel]').forEach(a => a.href = 'tel:' + SALON.telefon.replace(/[^\d+]/g,''));
+
+    const heroWa = document.getElementById('heroWa');
+    if (heroWa) { heroWa.href = waUrl; heroWa.target = '_blank'; heroWa.rel = 'noopener'; }
+
+    const mapEl = document.getElementById('mapFrame');
+    if (mapEl) mapEl.src = 'https://www.google.com/maps?q=' + encodeURIComponent(SALON.mapsQuery) + '&output=embed';
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  }
+
+  /* ---------- bento service cards ---------- */
+  function buildServices() {
+    const grid = document.getElementById('serviceGrid');
+    grid.innerHTML = HIZMETLER.map(h => `
+      <article class="reveal card svc ${h.size}">
+        <div class="top">
+          <span class="ico" aria-hidden="true">${h.ico}</span>
+          <span class="pole barber-stripe" aria-hidden="true"></span>
+        </div>
+        <h3>${h.ad}</h3>
+        <p>${h.desc}</p>
+        <div class="foot">
+          <span class="price">Fiyat WhatsApp'tan</span>
+          <a href="#iletisim" class="go">Randevu <span aria-hidden="true">→</span></a>
+        </div>
+      </article>`).join('');
+
+    const sel = document.getElementById('f-hizmet');
+    sel.innerHTML = HIZMETLER.map(h => `<option>${h.ad}</option>`).join('') + '<option>Diğer</option>';
+  }
+
+  /* ---------- gallery placeholders (CSS gradients, no stock photos) ---------- */
+  function buildGallery() {
+    const grid = document.getElementById('galleryGrid');
+    const grads = [
+      'linear-gradient(135deg,#1C1815,#6E2B2B)',
+      'linear-gradient(135deg,#14110F,#C8A24A)',
+      'linear-gradient(135deg,#6E2B2B,#14110F)',
+      'linear-gradient(135deg,#1C1815,#C8A24A)',
+      'linear-gradient(135deg,#C8A24A,#6E2B2B)',
+      'linear-gradient(135deg,#14110F,#1C1815)',
+      'linear-gradient(135deg,#6E2B2B,#C8A24A)',
+      'linear-gradient(135deg,#1C1815,#14110F)',
+    ];
+    const labels = ['Fade Kesim','Sakal Tasarım','Ustura Tıraş','Pompadour','Saç + Sakal','Çocuk Kesim','Yüz Bakımı','Detay'];
+    // first 4 tiles get a real photo layer (img/g1..g4.jpg) over the gradient.
+    // if the file is 404, the layer is transparent and the gradient shows through.
+    grid.innerHTML = grads.map((g,i) => {
+      const photo = `<span class="photo" aria-hidden="true" style="background-image:url('img/g${i+1}.jpg')"></span>`;
+      const hint = '';
+      return `
+      <div class="reveal tile leather-texture" style="background:${g}" role="img" aria-label="${labels[i]} — yer tutucu görsel">
+        ${photo}${hint}
+        <span class="lbl">${labels[i]}</span>
+      </div>`;
+    }).join('');
+  }
+
+  /* ---------- reviews ---------- */
+  function buildReviews() {
+    const grid = document.getElementById('reviewGrid');
+    grid.innerHTML = YORUMLAR.map(y => `
+      <article class="reveal card rev">
+        <div class="stars" aria-label="${y.not} / 5 yıldız">${'★'.repeat(y.not)}<span class="off">${'★'.repeat(5-y.not)}</span></div>
+        <p>"${y.txt}"</p>
+        <div class="who">
+          <span class="av" aria-hidden="true">${y.ad.charAt(0)}</span>
+          <span class="nm">${y.ad}</span>
+        </div>
+      </article>`).join('');
+  }
+
+  /* ---------- JSON-LD LocalBusiness ---------- */
+  function injectJsonLd() {
+    const ld = {
+      "@context": "https://schema.org",
+      "@type": "HairSalon",
+      "name": SALON.ad + " Barbershop",
+      "description": "Premium erkek kuaförü ve berber — saç kesim, sakal şekillendirme, sıcak havlu ustura tıraşı.",
+      "image": "",
+      "telephone": SALON.telefon,
+      "address": { "@type": "PostalAddress", "streetAddress": SALON.adres, "addressLocality": "Kadıköy", "addressRegion": "İstanbul", "addressCountry": "TR" },
+      "areaServed": "Kadıköy, İstanbul",
+      "priceRange": "₺₺",
+      "openingHoursSpecification": [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "10:00", "closes": "21:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "11:00", "closes": "19:00" }
+      ]
+      // NOT: aggregateRating bilerek eklenmedi — gercek dogrulanmis musteri yorumu/puani
+      // olmadan sahte rating yayinlamak yaniltici olur (Google rich-result ihlali riski).
+    };
+    const s = document.createElement('script');
+    s.type = 'application/ld+json';
+    s.textContent = JSON.stringify(ld);
+    document.head.appendChild(s);
+  }
+
+  /* ---------- contact form (no real backend) ---------- */
+  function wireForm() {
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      if (!form.checkValidity()) { form.reportValidity(); return; }
+      // operator: Formspree veya WhatsApp'a bagla — su anda hicbir yere POST etmiyor
+      showToast('Talebiniz alındı! En kısa sürede döneceğiz.');
+      form.reset();
+    });
+  }
+  let toastTimer;
+  function showToast(msg) {
+    const t = document.getElementById('toast');
+    document.getElementById('toastMsg').textContent = msg;
+    t.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => t.classList.remove('show'), 3600);
+  }
+
+  /* ---------- navbar transparent -> solid ---------- */
+  function wireNavbar() {
+    const nav = document.getElementById('navbar');
+    const onScroll = () => nav.classList.toggle('solid', window.scrollY > 40);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+  }
+
+  /* ---------- mobile menu (proper modal: scroll-lock + focus mgmt) ---------- */
+  function wireMenu() {
+    const menu = document.getElementById('drawer');
+    const burger = document.getElementById('hamburger');
+    const closeBtn = document.getElementById('closeMenu');
+    const isOpen = () => !menu.classList.contains('closed');
+    const focusables = () => menu.querySelectorAll('a[href], button:not([disabled])');
+    const open = () => {
+      menu.classList.remove('closed');
+      burger.setAttribute('aria-expanded','true');
+      document.body.style.overflow = 'hidden';           // lock background scroll
+      closeBtn.focus();                                  // move focus into modal
+    };
+    const close = () => {
+      menu.classList.add('closed');
+      burger.setAttribute('aria-expanded','false');
+      document.body.style.overflow = '';                 // restore scroll
+      burger.focus();                                    // return focus to trigger
+    };
+    burger.addEventListener('click', open);
+    closeBtn.addEventListener('click', close);
+    document.querySelectorAll('.mob-link').forEach(a => a.addEventListener('click', close));
+    document.addEventListener('keydown', e => {
+      if (!isOpen()) return;
+      if (e.key === 'Escape') { close(); return; }
+      if (e.key === 'Tab') {                             // trap focus inside drawer
+        const f = focusables();
+        if (!f.length) return;
+        const first = f[0], last = f[f.length - 1];
+        if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+      }
+    });
+  }
+
+  /* ---------- split hero words into kinetic chars (only if animating) ---------- */
+  function splitHero() {
+    document.querySelectorAll('.kin-line[data-text]').forEach(line => {
+      const text = line.textContent;
+      line.textContent = '';
+      [...text].forEach(ch => {
+        const span = document.createElement('span');
+        span.className = 'kin';
+        span.textContent = ch;
+        line.appendChild(span);
+      });
+    });
+  }
+
+  /* ---------- motion: Lenis (DESKTOP ONLY) + GSAP, single RAF ---------- */
+  function wireMotion() {
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (reduced || typeof gsap === 'undefined') return;  // content stays visible
+
+    document.body.classList.add('js-anim');
+    splitHero();
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Lenis ONLY on true desktop pointers (no touch jank / RAF desync)
+    const isDesktop = window.matchMedia('(pointer: fine) and (hover: hover)').matches;
+    let lenis = null;
+    if (isDesktop && typeof Lenis !== 'undefined') {
+      lenis = new Lenis({ duration: 1.1, smoothWheel: true });
+      // canonical single RAF — no autoRaf, GSAP ticker drives Lenis
+      lenis.on('scroll', ScrollTrigger.update);
+      gsap.ticker.add(t => lenis.raf(t * 1000));
+      gsap.ticker.lagSmoothing(0);
+    }
+
+    // hero intro: eyebrow + kinetic title chars + rest
+    const heroReveals = document.querySelectorAll('#hero .reveal');
+    heroReveals.forEach(el => el.classList.add('is-in'));
+    gsap.to(heroReveals, { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out', stagger: 0.08 });
+    gsap.to('#hero .kin', { opacity: 1, y: 0, duration: 0.5, ease: 'power3.out', stagger: 0.035, delay: 0.15 });
+
+    // batched scroll reveals — groups triggers, keeps active count low
+    ScrollTrigger.config({ ignoreMobileResize: true });
+    ScrollTrigger.batch('.reveal:not(#hero .reveal)', {
+      start: 'top 88%',
+      fastScrollEnd: true,
+      onEnter: batch => {
+        batch.forEach(el => el.classList.add('is-in'));
+        gsap.to(batch, { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out', stagger: 0.08, overwrite: true });
+      },
+    });
+
+    // anchor smooth scroll via Lenis (desktop only)
+    if (lenis) {
+      document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', e => {
+          const id = a.getAttribute('href');
+          if (id.length > 1 && document.querySelector(id)) {
+            e.preventDefault();
+            lenis.scrollTo(id, { offset: -70 });
+          }
+        });
+      });
+    }
+
+    // recalc after fonts/layout settle
+    window.addEventListener('load', () => ScrollTrigger.refresh());
+    setTimeout(() => ScrollTrigger.refresh(), 400);
+  }
+
+  /* ---------- hero parallax + cursor-follow glow (DESKTOP ONLY) ----------
+     transform/opacity only; rAF-throttled; off under reduced-motion + mobile */
+  function wireHeroFx() {
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const isDesktop = window.matchMedia('(pointer: fine) and (hover: hover)').matches;
+    if (reduced || !isDesktop) return;
+
+    const hero  = document.getElementById('hero');
+    const photo = document.getElementById('heroPhoto');
+    const glow  = document.getElementById('cursorGlow');
+
+    // --- parallax: photo layer drifts slower than scroll ---
+    let pTicking = false;
+    if (photo) {
+      const onScroll = () => {
+        if (pTicking) return;
+        pTicking = true;
+        requestAnimationFrame(() => {
+          const y = window.scrollY;
+          if (y < window.innerHeight) {           // only while hero is in view
+            photo.style.transform = 'translate3d(0,' + (y * 0.18) + 'px,0)';
+          }
+          pTicking = false;
+        });
+      };
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    }
+
+    // --- cursor glow: single element follows pointer, rAF-throttled ---
+    if (hero && glow) {
+      let gx = 0, gy = 0, gTicking = false;
+      const move = e => {
+        const r = hero.getBoundingClientRect();
+        gx = e.clientX - r.left;
+        gy = e.clientY - r.top;
+        if (gTicking) return;
+        gTicking = true;
+        requestAnimationFrame(() => {
+          glow.style.transform = 'translate3d(' + gx + 'px,' + gy + 'px,0)';
+          gTicking = false;
+        });
+      };
+      hero.addEventListener('pointermove', move, { passive: true });
+      hero.addEventListener('pointerenter', () => hero.classList.add('glow-on'));
+      hero.addEventListener('pointerleave', () => hero.classList.remove('glow-on'));
+    }
+  }
+
+  /* ---------- boot ---------- */
+  function boot() {
+    applyConfig();
+    buildServices();
+    buildGallery();
+    buildReviews();
+    injectJsonLd();
+    wireForm();
+    wireNavbar();
+    wireMenu();
+    wireMotion();   // GSAP/Lenis are deferred; run after they parse
+    wireHeroFx();   // parallax + cursor glow (desktop only, reduced-motion safe)
+    probePhotos();  // only show real-photo layers if the file actually loads
+  }
+
+  /* ---------- photo fallback probe ----------
+     Hero + gallery photo layers carry background-image:url('img/*.jpg').
+     If the file is missing the gradient already shows through, but the browser
+     still logs a 404. Probe each source with an Image(); only keep the layer's
+     background when it loads, otherwise clear it (clean console, no flash). */
+  function probePhotos() {
+    const layers = [
+      document.getElementById('heroPhoto'),
+      ...document.querySelectorAll('#galleryGrid .photo'),
+    ].filter(Boolean);
+    layers.forEach(el => {
+      const m = /url\((['"]?)(.*?)\1\)/.exec(el.style.backgroundImage || '');
+      if (!m || !m[2]) return;
+      const src = m[2];
+      el.style.backgroundImage = 'none';                 // gradient shows meanwhile
+      const probe = new Image();
+      probe.onload = () => { el.style.backgroundImage = "url('" + src + "')"; };
+      probe.src = src;                                   // onerror: stays gradient
+    });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', boot);
+  } else {
+    boot();
+  }
+</script>
+</body>
+</html>
